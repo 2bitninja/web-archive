@@ -1,0 +1,1758 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>My UNIX (Solaris, Linux, BSD, Mac OS X) &amp; Windows Command Notes</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.1  (Unix)">
+	<META NAME="AUTHOR" CONTENT="antone rich">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="0;0">
+	<META NAME="DESCRIPTION" CONTENT="These are my notes for the command line. I have listed commands for UNIX, Linux, Window, Mac OS X, BSD, and Sun Solaris">
+	<STYLE TYPE="text/css">
+	<!--
+		TH P { background: #980000 }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=CENTER><A NAME="hd1"></A><BR><FONT SIZE=5 STYLE="font-size: 19pt">My
+UNIX (Solaris, Linux, BSD, Mac OS X) &amp; Windows Command Notes</FONT></P>
+<P ALIGN=CENTER><A HREF="http://www.rich-online.net/notes.htm">http://www.rich-online.net/notes.htm</A>
+<BR>See something missing? See errors on the page? Let me know.</P>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><A NAME="hd2"></A><FONT SIZE=3 STYLE="font-size: 12pt">UNIX
+Section<!-------------------------------------------- Common Commands ---------------------></FONT>
+<B>Common Commands</B> 
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=350>
+				<P>Command</P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>cd <FONT COLOR="#808080"><I><B>path</B></I></FONT><BR>~<BR>-<BR>../</P>
+			</TD>
+			<TD>
+				<P>Change working directory<BR>~ Takes you to your home
+				directory<BR>- Takes you to last directory you visited<BR>../
+				Takes you directory back.</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ls <FONT COLOR="#808080"><I><B>filename(s)</B></I></FONT><BR>-l<BR>-a<BR>-t<BR>-r<BR>-ltr</P>
+			</TD>
+			<TD>
+				<P>Shows contents of the directory<BR>-l gives nice list
+				layout<BR>-a shows hidden files<BR>-t Puts files in order of time
+				last accessed at the top <BR>-r Puts files in reverse order.
+				<BR>-ltr lists files last accessed at the bottom</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>cp <FONT COLOR="#808080"><I><B>sourcefile destionfile</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Copies file from one place to anther. Can also change name of
+				the destion file when copying. 
+				</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>mv <FONT COLOR="#808080"><I><B>sourcefile destionfile</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Moves file from one place to anther. This command can also be
+				used to rename a file</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>rm <FONT COLOR="#808080"><I><B>file</B></I></FONT><BR>rm -R
+				<FONT COLOR="#808080"><I><B>directory</B></I></FONT> <BR>rmdir
+				<FONT COLOR="#808080"><I><B>directory</B></I></FONT> 
+				</P>
+				<P><I>Path:/usr/bin/rm<BR>Path:/usr/bin/rmdir</I></P>
+			</TD>
+			<TD>
+				<P>To remove files and directories<BR>Recursively removes
+				directories and subdirectories<BR>Removes directory</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>pwd <FONT COLOR="#808080"><I><B>path</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Tells you where you are</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!-------------------------------------- Disk and File Management ---------------------><B>Disk
+and File Management</B> 
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=350>
+				<P>Command</P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>df<BR>-k<BR>-h<BR>-F <FONT COLOR="#808080"><I><B>filetype</B></I></FONT></P>
+				<P><I>Path: /usr/bin/df</I> 
+				</P>
+			</TD>
+			<TD>
+				<P>Shows system directory size Outputs info in a nice chart.<BR>-h
+				Human readable version of -k</P>
+				<P>Displays only file format type you specify. 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>swap -l</P>
+			</TD>
+			<TD>
+				<P>Tells you were the swap file is located on system</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>mount <FONT COLOR="#808080"><I><B>/dev/hda2 /new/subdir</B></I></FONT><BR>mount
+				-F nfs <FONT COLOR="#808080"><I><B>remote server</B></I></FONT>:
+				<FONT COLOR="#808080"><I><B>/export/home /local/home</B></I></FONT>
+								</P>
+			</TD>
+			<TD>
+				<P>Attaches drives (hard drives, cdrom, floppy) to file system
+				<BR>Mounts NFS to local machine</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>unmount <FONT COLOR="#808080"><I><B>/dev/hda2</B></I></FONT>
+				or <FONT COLOR="#808080"><I><B>/new/subdir</B></I></FONT><BR>-f</P>
+			</TD>
+			<TD>
+				<P>Unmounts file system<BR>Forces a unmount 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>du<BR>du -sh *</P>
+			</TD>
+			<TD>
+				<P>Shows disk usage.<BR>Shows directory sizes.</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>mkdir <FONT COLOR="#808080"><I><B>Path</B></I></FONT><BR>-m<BR>-p
+								</P>
+				<P>Example: <BR>mkdir /usr/local/nagios</P>
+			</TD>
+			<TD>
+				<P>Makes directory<BR>Set mode like chmod<BR>Creates non-existing
+				parent directories first</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ln -s <FONT COLOR="#808080"><I><B>Path</B></I></FONT> <FONT COLOR="#808080"><I><B>Path</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>make hard or symbolic links to files</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>newfs</P>
+			</TD>
+			<TD>
+				<P>Constucts a UFS file system</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>cfgadm -al<BR>-c unconfigure <FONT COLOR="#808080"><I><B>c[#]</B></I></FONT><BR>-c
+				configure <FONT COLOR="#808080"><I><B>c[#]</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>To inspect configuration</P>
+			</TD>
+			<TD>
+				<P>Solaris 10 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>devfsadm -C -c <FONT COLOR="#808080"><I><B>device class (disk
+				or tape)</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Resets special device files.<BR>-C Clears special device
+				files<BR>-c Resets special device files</P>
+			</TD>
+			<TD>
+				<P>Solaris 10 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TH COLSPAN=3 BGCOLOR="#ffffff">
+				<P STYLE="border: 1.00pt solid #980000; padding: 0.02in"><FONT COLOR="#980000">Volume
+				Manager Solaris</FONT></P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>metastat</P>
+			</TD>
+			<TD>
+				<P>Displays status for meta devices and hat spares. Useful for
+				RAIDS</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!------------------------------------------ Screen Capture  -------------------------------------><B>Screen
+Capture</B> 
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=340>
+				<P>Command</P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH WIDTH=80>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>Screencapture <FONT COLOR="#808080"><I><B>out file name</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Use to get command line Screen capture</P>
+			</TD>
+			<TD>
+				<P>Mac OS X</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>script <FONT COLOR="#808080"><I><B>out file name</B></I></FONT><BR>-a</P>
+			</TD>
+			<TD>
+				<P>Use to get command line Screen capture<BR>-a appends to
+				existing file.</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!-------------------------------------------------- System Administration  -----------------------><B>System
+Administration</B> 
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=340>
+				<P>Command</P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH WIDTH=80>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>su<BR>su <FONT COLOR="#808080"><I><B>username</B></I></FONT><BR>-</P>
+			</TD>
+			<TD>
+				<P>Assume superuser/root<BR>Assume user's account<BR>This
+				argument gives you the environment of the account you assume.</P>
+				<P>Other important su facts<BR>/varadm/sulog --&gt; tracks who is
+				using su</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>sudo<BR>sudo <FONT COLOR="#808080"><I><B>username</B></I></FONT></P>
+				<P><I>Path: /usr/local/bin/sudo</I></P>
+			</TD>
+			<TD>
+				<P>assume root<BR>assume user's account</P>
+				<P>Other important sudo facts The user must be in the sudoers
+				file /etc/sudoers<BR>CMD: /usr/local/sbin/visudo --&gt; use
+				./visudo to edit the sudoers file.</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>uname -a</P>
+			</TD>
+			<TD>
+				<P>To see OS version</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>zonename</P>
+			</TD>
+			<TD>
+				<P>Tells you which zone you are using</P>
+			</TD>
+			<TD>
+				<P>Solaris 10</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>hostname</P>
+			</TD>
+			<TD>
+				<P>Tells you which computer your on.</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ps -ef</P>
+			</TD>
+			<TD>
+				<P>Use this to see what processes are running on your machine 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>kill -9 <FONT COLOR="#808080"><I><B>process ID/s</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Use this to kill processes that you no longer wish to run on
+				your machine 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>pkill <FONT COLOR="#808080"><I><B>process name</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Use this to kill programs that you no longer wish to run on
+				your machine 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>reboot -- -r</P>
+			</TD>
+			<TD>
+				<P>Reconfiguration boot. The -- passes the -r option to the boot
+				process</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>fuser <BR>-c<BR>-k<BR>-f<BR>-u</P>
+			</TD>
+			<TD>
+				<P>Use to find out which user is using the file system you need
+				to unmount</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>crontab <BR>-l<BR>-e</P>
+			</TD>
+			<TD>
+				<P>For script automation <BR>-l to look at contents in crontab<BR>-e
+				to edit contents in crontab</P>
+				<P>* Note: if crontab -e doesn't work us this
+				command.<BR>EDITOR=vi;export EDITOR</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TH COLSPAN=3 BGCOLOR="#ffffff">
+				<P STYLE="border: 1.00pt solid #980000; padding: 0.02in"><FONT COLOR="#980000">Compress,
+				Zip, Tar</FONT></P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>tar cvf <FONT COLOR="#808080"><I><B>tarfile</B></I></FONT><BR>tar
+				xzf <FONT COLOR="#808080"><I><B>tarfile</B></I></FONT> 
+				</P>
+			</TD>
+			<TD>
+				<P>Tares files<BR>Untares files</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>uncompress <FONT COLOR="#808080"><I><B>File.Z</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Uncompress files with an .Z extension.</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>gunzip <FONT COLOR="#808080"><I><B>File</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Unzips files on UNIX</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>compress <FONT COLOR="#808080"><I><B>File</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>compresses files and puts .Z extension at the end.</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TH COLSPAN=3 BGCOLOR="#ffffff">
+				<P STYLE="border: 1.00pt solid #980000; padding: 0.02in"><FONT COLOR="#980000">Services</FONT></P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>svcadm <FONT COLOR="#808080"><I><B>{disable / enable}
+				{process/program}</B></I></FONT><BR>svcadm refresh
+				<FONT COLOR="#808080"><I><B>{process/program}</B></I></FONT></P>
+				<P>Examples: <BR>svcadm disable ntp 
+				</P>
+				<P><I>Path: /usr/sbin</I></P>
+			</TD>
+			<TD>
+				<P>To enable or disable process/program. <BR>&lt;---- restart
+				program 
+				</P>
+				<P><BR>&lt;---- This disables the NTP client</P>
+			</TD>
+			<TD>
+				<P>Solaris 10</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>svccfg <FONT COLOR="#808080"><I><B>{disable / enable}
+				{process/program}</B></I></FONT><BR>Path: /usr/sbin</P>
+			</TD>
+			<TD>
+				<P>Service Configuration 
+				</P>
+			</TD>
+			<TD>
+				<P>Solaris 10</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>svcprop <FONT COLOR="#808080"><I><B>{disable / enable}
+				{process/program}</B></I></FONT> 
+				</P>
+				<P>Path: /usr/sbin</P>
+			</TD>
+			<TD>
+				<P>Used to see properties of services</P>
+			</TD>
+			<TD>
+				<P>Solaris 10</P>
+			</TD>
+		</TR>
+		<TR>
+			<TH COLSPAN=3 BGCOLOR="#ffffff">
+				<P STYLE="border: 1.00pt solid #980000; padding: 0.02in"><FONT COLOR="#980000">Package
+				Management</FONT></P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>pkgadd <FONT COLOR="#808080"><I><B>pkgname</B></I></FONT><BR>-d</P>
+			</TD>
+			<TD>
+				<P>To add software package<BR>-d To specify director</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>pkgrm <FONT COLOR="#808080"><I><B>pkgname</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>To remove a package</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>pkgchk <FONT COLOR="#808080"><I><B>pkgname</B></I></FONT><BR>-p
+				<BR>-v 
+				</P>
+			</TD>
+			<TD>
+				<P>Verifies package<BR>-p checks file<BR>-v Lists package
+				contents</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>pkginfo <FONT COLOR="#808080"><I><B>pkgname</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Tells you what packages are installed on the computer and
+				gives info on the package</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>pkgparam <FONT COLOR="#808080"><I><B>pkgname</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Display package parameter values</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!------------------------------------------- User Administration      ------------------------><B>User
+Administration</B> 
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=340>
+				<P>Command</P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH WIDTH=80>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>passwd <FONT COLOR="#808080"><I><B>username</B></I></FONT><BR>-f</P>
+			</TD>
+			<TD>
+				<P>Set or change password<BR>-f Forces the user to change
+				password at the next login</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>useradd <FONT COLOR="#808080"><I><B>username</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Adds user to system 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>groupadd <FONT COLOR="#808080"><I><B>gid groupname</B></I></FONT></P>
+				<P>Example:<BR>groupadd -g 101 nagios</P>
+			</TD>
+			<TD>
+				<P>Adds groups to system <BR>-g Assigns the group id gid for the
+				new group</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>chown <FONT COLOR="#808080"><I><B>username filename</B></I></FONT><BR>chown
+				<FONT COLOR="#808080"><I><B>username:groupname path/filename</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Change owner of file 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>chmod <FONT COLOR="#808080"><I><B>permissions/options file</B></I></FONT></P>
+				<P>Examples: <BR>chmod 777 /home/filename</P>
+			</TD>
+			<TD>
+				<P>Changes Read, Write(modify), Execute permissions<BR>r = read,
+				w = write, x = execute, - = no permisstions<BR>r = 4, w = 2, x =
+				1, - = 0<BR>7 = rwx, 5 = r-x, 
+				</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>chgrp <FONT COLOR="#808080"><I><B>groupname file/directory</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Changes group ownership</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>last <FONT COLOR="#808080"><I><B>username</B></I></FONT></P>
+				<P>lastlog</P>
+				<P><I>path: /var/log/lastlog</I></P>
+			</TD>
+			<TD>
+				<P>See last time user logged in</P>
+				<P>Prints contents of lastlog</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>whois</P>
+			</TD>
+			<TD>
+				<P>Tells you who is logged onto a system.</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>who</P>
+			</TD>
+			<TD>
+				<P>Tells you who is logged onto a system.</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>w</P>
+			</TD>
+			<TD>
+				<P>Tells you who is logged onto a system. Same as who but, has
+				better layout. Has header for each section. Shows server uptime,
+				time, number of users and average load. 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!--------------------------------------------------- Remote connetions     --------------------><B>Remote
+connetions</B> 
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=340>
+				<P>Command</P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH WIDTH=80>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>ssh -X <FONT COLOR="#808080"><I><B>user</B></I></FONT>@<FONT COLOR="#808080"><I><B>hostname</B></I></FONT><BR>or<BR>ssh
+				-X <FONT COLOR="#808080"><I><B>hostname</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>For logging in securely to remote machine and for executing
+				commands on a remote machine.<BR>-X lets you display X11 programs
+				from a remote machine, can be left out.</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>scp <FONT COLOR="#808080"><I><B>{Lfile} username</B></I></FONT>@<FONT COLOR="#808080"><I><B>hostname</B></I></FONT>:
+				<FONT COLOR="#808080"><I><B>Rdir</B></I></FONT> <BR>scp -r
+				<FONT COLOR="#808080"><I><B>{Lfile} username</B></I></FONT>@<FONT COLOR="#808080"><I><B>hostname</B></I></FONT>:
+				<FONT COLOR="#808080"><I><B>Rdir</B></I></FONT> 
+				</P>
+				<P>Example: <BR>scp myfile mylogin@myserver:/home<BR>scp
+				mylogin@myserver:/home myfile</P>
+			</TD>
+			<TD>
+				<P>Securely transfer files between two computers<BR>-r To copy a
+				directory</P>
+				<P>Links to more
+				info.<BR><A HREF="http://kb.iu.edu/data/agye.html">http://kb.iu.edu/data/agye.html<BR></A><A HREF="http://acs.ucsd.edu/info/scp.shtml">http://acs.ucsd.edu/info/scp.shtml</A></P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>rsh or rlogin <FONT COLOR="#808080"><I><B>hostname</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>To login to remote machines. Not secure.</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>telnet <FONT COLOR="#808080"><I><B>hostname</B></I></FONT> 
+				</P>
+			</TD>
+			<TD>
+				<P>To login to remote machines. Not secure.<BR><FONT COLOR="#980000">Security
+				Notice<BR>Transmits username and password in the clear.</FONT></P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ftp <FONT COLOR="#808080"><I><B>hostname</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Use to transfer files to and from computers<BR><FONT COLOR="#980000">Security
+				Notice<BR>Transmits username and password in the clear.</FONT></P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>xhost +<BR>xhost + <FONT COLOR="#808080"><I><B>hostname</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Allows connections from remote hosts<BR>Allows connections
+				from single host</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>setenv DISPLAY <FONT COLOR="#808080"><I><B>hostname:0.0</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Must use csh<BR>Remote displays back to your location.
+				Functions like ssh -X, but not secure. Must use with xhost
+				+.<BR>Links to more
+				info<BR><A HREF="http://www.cyberciti.biz/tips/how-to-export-display-from-linux-to-freebsd.html">http://www.cyberciti.biz/tips/how-to-export-display-from-linux-to-freebsd.html</A></P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>export DISPLAY <FONT COLOR="#808080"><I><B>hostname:0.0</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>works with Bash, KSH.<BR>Remote displays back to your
+				location. Functions like ssh -X, but not secure. Must use with
+				xhost +.<BR>Links to more
+				info<BR><A HREF="http://www.cyberciti.biz/tips/how-to-export-display-from-linux-to-freebsd.html">http://www.cyberciti.biz/tips/how-to-export-display-from-linux-to-freebsd.html</A></P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!------------------------------------------ Networking   ---------------------------------><B>Networking</B>
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=340>
+				<P><B>Command</B></P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH WIDTH=80>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>ifconfig -a<BR>ifconfig <FONT COLOR="#808080"><I><B>NIC
+				&quot;up/down&quot;</B></I></FONT> <BR>plumb</P>
+				<P><I>Example:</I> ifconfig eth1 down</P>
+			</TD>
+			<TD>
+				<P>Use to check network addresses<BR>To bring a NIC
+				card/interface up or down</P>
+				<P><BR>This example bring the interface down 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>dladm show-link</P>
+			</TD>
+			<TD>
+				<P>Shows network interfases</P>
+			</TD>
+			<TD>
+				<P>Solaris</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ping <FONT COLOR="#808080"><I><B>hostname</B></I></FONT></P>
+				<P><I>Path:/usr/sbin/ping</I></P>
+			</TD>
+			<TD>
+				<P>Use to check network connections</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ntpdate <FONT COLOR="#808080"><I><B>NTP server</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Resinks the local machine with the NTP servers date/time</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ipfw list</P>
+			</TD>
+			<TD>
+				<P>Allows you to see the actual firewall rules<BR>Must have ipf
+				firwall installed to work. Installed on Mac OS X by default</P>
+			</TD>
+			<TD>
+				<P>All<BR>From BSD</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ipf</P>
+			</TD>
+			<TD>
+				<P>Allows IP filtering<BR>* Must be root to use</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>netstat -rn</P>
+			</TD>
+			<TD>
+				<P>Gives you routes</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>traceroute</P>
+				<P><I>Path: /usr/sbin/traceroute</I></P>
+			</TD>
+			<TD>
+				<P>Traces routes</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>route add net <FONT COLOR="#808080"><I><B>IP IP</B></I></FONT>
+								</P>
+				<P><I>Path: /usr/sbin/route</I></P>
+			</TD>
+			<TD>
+				<P>Add static routes</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>nslookup <FONT COLOR="#808080"><I><B>servername</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Gives server IP address</P>
+			</TD>
+			<TD>
+				<P>All</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!----------------------------------------- Editors  ----------------------------------------><B>Editors</B>
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=340>
+				<P><B>Command</B></P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH WIDTH=80>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>vi <FONT COLOR="#808080"><I><B>file</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Command line text editor</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>gedit <FONT COLOR="#808080"><I><B>file</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>gedit is the default text eEditor for Solaris</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!---------------------------------------- ZFS  -------------------------------------------------><B>ZFS</B>
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=340>
+				<P>Command</P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH WIDTH=80>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>zpool create -f <FONT COLOR="#808080"><I><B>'pool name' 'hard
+				disk'</B></I></FONT><BR><I>Example:</I> zpool create -f newpool
+				c1t2d0</P>
+			</TD>
+			<TD>
+				<P>Makes a ZFS partion called newpool</P>
+			</TD>
+			<TD>
+				<P>ZFS 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>zpool status -v 
+				</P>
+			</TD>
+			<TD>
+				<P>To see ZFS status and device names</P>
+			</TD>
+			<TD>
+				<P>ZFS</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>zfs create <BR>-o</P>
+			</TD>
+			<TD>
+				<P>Makes ZFS directory<BR>for options</P>
+			</TD>
+			<TD>
+				<P>ZFS</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>zfs list</P>
+			</TD>
+			<TD>
+				<P>Much like df -k</P>
+			</TD>
+			<TD>
+				<P>ZFS</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!------------------------------------------ Zones  ----------------------------------------------><B>Zones</B>
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=340>
+				<P>Command</P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH WIDTH=80>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>zonename</P>
+			</TD>
+			<TD>
+				<P>Tells you which zone you are using</P>
+			</TD>
+			<TD>
+				<P>Solaris 10</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>zoneadm list -cv</P>
+			</TD>
+			<TD>
+				<P>List all zones on machine.<BR>status installed ---&gt; needs
+				to be booted <BR>status configured ---&gt; needs to be installed</P>
+			</TD>
+			<TD>
+				<P>Solaris 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>zoneadm -z <FONT COLOR="#808080"><I><B>zonename</B></I></FONT>
+				install<BR>zoneadm -z <FONT COLOR="#808080"><I><B>zonename</B></I></FONT>
+				boot<BR>zoneadm -z <FONT COLOR="#808080"><I><B>zonename</B></I></FONT>
+				halt <BR>zoneadm -z <FONT COLOR="#808080"><I><B>zonename</B></I></FONT>
+				detach<BR>zoneadm -z <FONT COLOR="#808080"><I><B>zonename</B></I></FONT>
+				ready</P>
+				<P>zoneadm -z <FONT COLOR="#808080"><I><B>zonename</B></I></FONT>
+				reboot<BR>zoneadm -z <FONT COLOR="#808080"><I><B>zonename</B></I></FONT>
+				uninstall [-F]</P>
+			</TD>
+			<TD>
+				<P>installs a zone<BR>boots the zone<BR>Halts zone<BR>Detach the
+				specified zone<BR>Prepares a zone for running applications but
+				does not start any user processes in the zone<BR>Restart the
+				zones<BR>Uninstall the specified zone from the system</P>
+			</TD>
+			<TD>
+				<P>Solaris</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>zonecfg -z <FONT COLOR="#808080"><I><B>zonename</B></I></FONT>
+				-f <FONT COLOR="#808080"><I><B>configfile</B></I></FONT><BR>zonecfg
+				-z <FONT COLOR="#808080"><I><B>zonename</B></I></FONT>
+				delete<BR>zonecfg -z <FONT COLOR="#808080"><I><B>zonename</B></I></FONT>
+				uninstall 
+				</P>
+			</TD>
+			<TD>
+				<P>Configures zone<BR>Deletes zones<BR>uninstalls zone</P>
+			</TD>
+			<TD>
+				<P>Solaris</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>zlogin -C<FONT COLOR="#808080"><I><B>zonename</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Used to login to a zone</P>
+			</TD>
+			<TD>
+				<P>Solaris</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!---------------------------------------- Important locations   --------------------------------><B>Important
+locations</B> 
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=340>
+				<P>Important locations</P>
+			</TH>
+			<TH>
+				<P>Why It's important</P>
+			</TH>
+			<TH WIDTH=80>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>$HOME/.profile 
+				</P>
+			</TD>
+			<TD>
+				<P>User's login commands for sh and ksh</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>/etc/passwd</P>
+			</TD>
+			<TD>
+				<P>System's password file.<BR>Can be used to check if
+				user/process has an account on machine. 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>/etc/profile</P>
+			</TD>
+			<TD>
+				<P>system-wide sh and ksh login commands</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>/usr/local/sbin/visudo</P>
+			</TD>
+			<TD>
+				<P>Command used to edit the sudoers file.</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>/var/adm/sulog</P>
+			</TD>
+			<TD>
+				<P>log file<BR>Logs all failed attempts to su to another user are
+				logged here.</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>/etc/hosts</P>
+			</TD>
+			<TD>
+				<P>Use to check network addresses 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>/etc/hosts.allow</P>
+			</TD>
+			<TD>
+				<P>Used with ssh 
+				</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>/usr/sfw/bin/mozilla</P>
+			</TD>
+			<TD>
+				<P>Path to mazilla web browser on solaris</P>
+			</TD>
+			<TD>
+				<P>Solaris</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>/usr/bin/firefox</P>
+			</TD>
+			<TD>
+				<P>Path to firefox</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>/etc/issue</P>
+			</TD>
+			<TD>
+				<P>For the remote login banner</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>/etc/resolv.conf</P>
+			</TD>
+			<TD>
+				<P>Mostly used for DNS. Useful for LDAP as well</P>
+			</TD>
+			<TD>
+				<P>All 
+				</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!---------------------------------------- NetBackup commands   ---------------------------------><B>NetBackup
+commands</B> 
+</P>
+<CENTER>
+	<TABLE CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH WIDTH=340>
+				<P>Command</P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH WIDTH=80>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>cfgadm -al<BR>-c unconfigure <FONT COLOR="#808080"><I><B>c[#]</B></I></FONT><BR>-c
+				configure <FONT COLOR="#808080"><I><B>c[#]</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>To inspect configuration</P>
+			</TD>
+			<TD>
+				<P>Solaris 10 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>devfsadm -C -c <FONT COLOR="#808080"><I><B>device class (disk
+				or tape)</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Resets special device files.<BR>-C Clears special device
+				files<BR>-c Resets special device files</P>
+			</TD>
+			<TD>
+				<P>Solaris 10 
+				</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>sgscan all</P>
+				<P><I>Path: /usr/openv/volmgr/bin/</I></P>
+			</TD>
+			<TD>
+				<P>Validates how drivers see devices.</P>
+			</TD>
+			<TD>
+				<P>NetBackup</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>nbrbutil -resetMediaServer [mediaserver]</P>
+				<P><I>Path: /usr/openv/netbackup/bin/admincmd/</I></P>
+			</TD>
+			<TD>
+				<P>Resets Media server. Also ejects tapes.</P>
+			</TD>
+			<TD>
+				<P>NetBackup</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>tpconfig -d</P>
+				<P><I>Path: /usr/openv/volmgr/bin</I></P>
+			</TD>
+			<TD>
+				<P>Allows you to rest tape devices. Can up or down devices.</P>
+			</TD>
+			<TD>
+				<P>NetBackup</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>tpautoconf -t<BR>-a<BR>-v</P>
+				<P><I>Path: /usr/openv/volmgr</I></P>
+			</TD>
+			<TD>
+				<P>Shows how tape drives are being seen by NetBackup<BR>Automaticly
+				configures devices for you<BR>Verbos - detail feedback</P>
+			</TD>
+			<TD>
+				<P>NetBackup</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>netbackup <FONT COLOR="#808080"><I><B>start/stop</B></I></FONT>
+								</P>
+				<P><I>Path: /usr/openv/netbackup/bin/goodies</I></P>
+			</TD>
+			<TD>
+				<P>To start or stop NetBackup</P>
+			</TD>
+			<TD>
+				<P>NetBackup</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>bp.kill_all</P>
+			</TD>
+			<TD>
+				<P>Old NetBackup command to stop NetBackup. Use new command
+				above.</P>
+			</TD>
+			<TD>
+				<P>NetBackup</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>bpps -x</P>
+				<P><I>Path: /usr/openv/netbackup/bin/</I></P>
+			</TD>
+			<TD>
+				<P>Shows NetBackup Running processes.</P>
+			</TD>
+			<TD>
+				<P>NetBackup</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>Note</P>
+			</TD>
+			<TD>
+				<P>/opt/openv can be used instead of /usr/openv/</P>
+			</TD>
+			<TD>
+				<P>NetBackup</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><A NAME="hd21"></A><!---------------------------------------------- Windows Commands --------------------------------><FONT SIZE=3 STYLE="font-size: 12pt">Windows
+Section</FONT> 
+</P>
+<CENTER>
+	<TABLE WIDTH=850 BORDER=1 CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH BGCOLOR="#33ccff">
+				<P>Command</P>
+			</TH>
+			<TH BGCOLOR="#33ccff">
+				<P>Description</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>dir <FONT COLOR="#808080"><I><B>path</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Show whats in a directory</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>cd <FONT COLOR="#808080"><I><B>path</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Change working directory</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>telnet <FONT COLOR="#808080"><I><B>server</B></I></FONT> 
+				</P>
+			</TD>
+			<TD>
+				<P>To login to remote machines<BR><FONT COLOR="#980000">Security
+				Notice<BR>Transmits username and password in the clear.</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ipconfig<BR>/all<BR>/renew<BR>/release</P>
+			</TD>
+			<TD>
+				<P>Use to check network addresses<BR>More detail<BR>Renew network
+				settings<BR>Let go of network settings</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ping <FONT COLOR="#808080"><I><B>hostname</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Use to check network connections</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>netstat</P>
+			</TD>
+			<TD>
+				<P>Gives you routes</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>tracecert</P>
+			</TD>
+			<TD>
+				<P>Traces routes</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>nslookup <FONT COLOR="#808080"><I><B>servername</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Gives server IP address</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>ftp <FONT COLOR="#808080"><I><B>hostname</B></I></FONT></P>
+			</TD>
+			<TD>
+				<P>Use to transfer files to and from computers<BR><FONT COLOR="#980000">Security
+				Notice<BR>Transmits username and password in the clear.</FONT></P>
+			</TD>
+		</TR>
+		<TR>
+			<TD></TD>
+			<TD></TD>
+		</TR>
+		<TR>
+			<TD></TD>
+			<TD></TD>
+		</TR>
+		<TR>
+			<TD></TD>
+			<TD></TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><!------------------------------------------------- Program Commands   --------------------------><B>Program
+Commands</B> 
+</P>
+<CENTER>
+	<TABLE WIDTH=850 BORDER=1 CELLPADDING=2 CELLSPACING=2>
+		<TR>
+			<TH>
+				<P>Command</P>
+			</TH>
+			<TH>
+				<P>Description</P>
+			</TH>
+			<TH>
+				<P>OS/Program</P>
+			</TH>
+		</TR>
+		<TR>
+			<TD>
+				<P>SQLPlus</P>
+			</TD>
+			<TD>
+				<P>Command to login to Oracle</P>
+			</TD>
+			<TD>
+				<P>Oracle</P>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+				<P>perl -v</P>
+			</TD>
+			<TD>
+				<P>To see if ActivePerl is installed</P>
+			</TD>
+			<TD>
+				<P>Perl</P>
+			</TD>
+		</TR>
+	</TABLE>
+</CENTER>
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><FONT SIZE=4>Links</FONT> 
+</P>
+<HR SIZE=2 COLOR="#980000">
+<P ALIGN=CENTER STYLE="margin-bottom: 0in"><A HREF="default.htm">Home</A>&nbsp;|&nbsp;
+<A HREF="">My Notes</A>&nbsp;|&nbsp; <A HREF="rent.htm">Rentals </A>&nbsp;|&nbsp;
+<A HREF="#">links</A> 
+</P>
+<P STYLE="margin-bottom: 0in"><!-------------------------------- google-analytics.com -----------------------------------------><SCRIPT>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT><SCRIPT>
+try {
+var pageTracker = _gat._getTracker("UA-10815286-1");
+pageTracker._trackPageview();
+} catch(err) {}
+</SCRIPT><BR>
+</P>
+</BODY>
+</HTML>
