@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> </title>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+   <meta name="keywords" content="UNIX, Linux, commands, networking">
+   <meta name="description" content="This is where I put all my command 
+line notes that involve networking.">
+   <meta name="google-site-verification" content="Z4seMEA9SYFtPADLCF_Fuc-wzOLmYRCWVwbrEMAcKsc" />
+<style type="text/css"> 
+.SBContent {FONT: 12px arial, Helvetica, Geneva, Swiss, SunSans-Regular; 
+	MARGIN-LEFT: 5px; COLOR: black; MARGIN-RIGHT: 5px;
+}
+#bg {position: absolute; 
+	top: 5px; left: 5px;            
+        height: 125em; width: 1000px;
+        background-color: #980000;
+}
+#header {position: absolute; 
+         top: 10px; left: 10px;
+         height: 50px; width: 990px;  
+         background-color: #B2987E;
+	text-align:center;
+}
+#nav {position: absolute; 
+	top: 70px; left: 10px;     
+         height: 200px; width: 150px;             
+        background-color: #B2987E;
+}
+#L {position: absolute; 
+	top: 275px; left: 10px;     
+         height: 200px; width: 150px;            
+        background-color: #B2987E;
+}
+ 
+#body {position: absolute; 
+       top: 70px; left: 170px;
+       height: 118em; width: 830px;             
+       background-color: #B2987E;
+}
+#date {position: absolute; 
+       top: 18px; left: 940px;
+       font-size: 10px;
+} 
+ 
+ 
+body {background-color: #280000;
+}
+td {vertical-align: top; border: 2px solid #980000; background-color: white;
+padding: 3px 7px 3px 10px;
+}
+th {background-color: #980000; border: 2px solid black; 
+}
+.subH {background-color: white; border: 2px solid #980000; color: #980000;
+}
+.table {border-collapse:collapse; width: 600px; 
+}
+.td {border: 0px;
+}
+table { width: 820px;
+}
+.variable {font-style: italic; font-weight: bold; color: gray;
+}
+#hd1 {font-size:25px; font-weight: bold; color: #980000;
+}
+#hd2 {font-size:15px;  
+}
+.SN {color: #980000;
+}
+</style>
+</head>
+<body>
+<div id="bg"><div class="SBContent"></div></div>
+ 
+<div id="header"><div class="SBContent">
+<span id="hd1">My Networking Notes</span><br />
+ <b>Solaris, Linux, BSD, Mac OS X & Windows</b>
+</div></div><!--- header --->
+ 
+ 
+<div id="nav"><div class="SBContent">
+<a href="cmd.htm"></a><a href="cmd.htm">Main CMDs</a><br />
+<a href="unix.htm"></a><a href="unix.htm">Unix</a><br />
+<a href="edit.htm">Editors</a><br />
+<a href="terminal.htm">Terminal</a><br />
+<a href="#">Disk and File</a><br />
+<a href="netbackup.htm">NetBackup</a><br />
+<a href="windows.htm">Windows</a><br />
+<a href="network.htm">Networking</a>
+</div></div><!--- nav --->
+ 
+ 
+<div id="L"><div class="SBContent">
+Legend
+</div></div><!--- L --->
+ 
+<div id="date">10-05-2010</div> <!--- date --->
+
+<div id="body"><div class="SBContent"><p>
+<table>
+ <tr>
+  <th width="150px">Command</th>
+  <th>Description</th>
+  <th>OS</th>
+ </tr>
+ <tr>
+  <th class="subH" colspan="3">Remote Connections</th>
+ </tr>
+ <tr>
+  <td><b>ssh</b> <span class="variable">user</span>@<span class="variable">hostname</span><br />
+      or<br />
+      ssh <span class="variable">hostname</span>
+      <p></p>-X or -Y<br />-C<p></p>
+      <i>Path: /usr/bin/</td>
+ 
+  <td>SSH stands for Secure shell. SSH is used for securely logging into remote machines and 
+  executing commands on them.
+      -X or -Y lets you locally display X11 programs from a remote server. 
+      -X is better to use then -Y, only use -Y if -X doesn't work.<br />
+      -C is used to compress the data<p></p>
+      The ssh configuration file.<br /> /etc/ssh/sshd_config
+</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+  <td><b>ssh-keygen</b><br />
+  -t <span class="variable">rsa/dsa</span><br />
+  -f <span class="variable">Path</span></td>
+  <td>The ssh-keygen command generates the public and private key pair, used when setting up a key
+      exchange.<br /> <b>-t</b> tells ssh-keygen which encyription standard to use. Use <b>-f</b> to 
+      tell the command where to place the keys.<p></p>
+     
+      Links to more info on setting up key exchange.<br />
+      <a href="http://www.g-loaded.eu/2005/11/10/ssh-with-keys">
+http://www.g-loaded.eu/2005/11/10/ssh-with-keys</a></td>
+  <td>UNIX</td>
+ </tr>
+</tr>
+ <tr>
+  <td><b>ssh-copy-id</b><br />
+  <br />
+  </td>
+  <td>The ssh-copy-id copys your public and key to a remote the server.<br /> </td>
+  <td>UNIX</td>
+ </tr>
+
+  <tr>
+  <td><b>ssh-agent</b> <span class="variable">shell</span></td>
+  <td>The ssh-agent command starts your ssh agent in a shell. You need to have this running if
+      you want to log into a remote server without using your password.</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+  <td><b>ssh-add</b></td>
+  <td>The ssh-add command adds the ssh key to your running ssh-agent.</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+  <td><b>scp</b> <span class="variable">Lfile username</span>
+      @<span class="variable">hostname</span>:
+      <span class="variable">Rdir</span> <br />
+      -r  
+      <p></p><i>Path: /usr/bin/ </td>
+  <td>Securely transfer files between two computers<br />
+      -r To copy a directory<p></p>
+      <table class="table">
+       <tr>
+        <td class="td"><b>Example:</b> <br />scp  myfile  mylogin@myserver:/home<br />
+      scp mylogin@myserver:/home myfile
+        </td>
+        <td class="td">Links to more info.<br />
+<a href="http://kb.iu.edu/data/agye.html">http://kb.iu.edu/data/agye.html<a/><br />
+<a href="http://acs.ucsd.edu/info/scp.shtml">http://acs.ucsd.edu/info/scp.shtml</a> </td>
+       </tr>
+      </table> 
+      
+<p></p>Is a part of ssh and can use key exchange.</td>
+  <td>UNIX</td>
+ </tr>
+  <tr>
+  <td><b>sftp</b> <span class="variable">hostname</span></td>
+  <td>Use to transfer files to and from computers. There are some 3rd party apps that use this 
+  protocol on Windows.<br /><b>Path for UNIX:</b> /usr/bin/
+</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+  <td><b>ftp</b> <span class="variable">hostname</span></td>
+  <td>Use to transfer files to and from computers<br />
+<span class="SN"><b>Security Notice:</b> Transmits username and password in the clear.</span><br />
+  <b>Path for UNIX:</b> /usr/bin/</td>
+  <td>All</td>
+ </tr>
+  <tr>
+  <td><b>telnet</b> <span class="variable">hostname</span></td>
+  <td>To login to remote machines. Not secure.<br />
+<span class="SN"><b>Security Notice:</b> Transmits username and password in the clear.</span><br />
+  <b>Path for UNIX:</b> /usr/bin/</td>
+  <td>All</td>
+ </tr>
+ <tr>
+  <td><b>rsh</b> <span class="variable">hostname</span>
+  <br ><i>Path: /usr/bin/</td>
+  <td>RSH stands for remote shell. To login to remote machines.<br /> 
+  <span class="SN"><b>Security Notice:</b> this is not secure.</span></td>
+  <td>UNIX</td>
+ </tr> 
+ <tr>
+  <td><b>rlogin</b> <span class="variable">hostname</span>
+  <br ><i>Path: /usr/bin/</td>
+  <td>To login to remote machines.<br /> 
+  <span class="SN"><b>Security Notice:</b> this is not secure.</span></td>
+  <td>UNIX</td>
+ </tr> 
+ <tr>
+  <td><b>vncserver</b><br />-kill :<span class="variable">#</span> </td>
+  <td>VNC is a free 3rd party program that allows a remote login, similar to Remote Desktop in 
+  Windows. Typing vncserver will start a VNC session. Adding -kill with the session number at the
+  end of the command will terminate the session. <br />
+</td>
+  <td>All</td>
+ </tr>
+ <tr>
+  <td><b>xhost</b> +<br />xhost + <span class="variable">hostname</span></td>
+  <td>Allows all incoming connections from remote hosts<br />
+  Allows connections from single host</td>
+  <td>UNIX</td>
+ </tr>
+<tr>
+  <td><b>setenv</b> DISPLAY <span class="variable">hostname:0.0</span></td>
+  <td>Must use csh<br />Remote displays back to your location. Functions like ssh -X. <br />
+  <span class="SN">Security Notice, this is not secure.</span><br /> Must use with xhost +.<br />
+  Links to more info:<br /> 
+<a href="http://www.cyberciti.biz/tips/how-to-export-display-from-linux-to-freebsd.html">
+http://www.cyberciti.biz/tips/how-to-export-display-from-linux-to-freebsd.html</a></td></td>
+  <td>UNIX</td>
+ </tr>
+<tr>
+  <td><b>export</b> DISPLAY <span class="variable">hostname:0.0</span></td>
+  <td> works with Bash, KSH.<br />Remote displays back to your location. Functions like ssh -X.
+  <br /><span class="SN">Security Notice, this is not secure.</span><br /> Must use with xhost +.
+  <br />Links to more info:<br /> 
+<a href="http://www.cyberciti.biz/tips/how-to-export-display-from-linux-to-freebsd.html">
+http://www.cyberciti.biz/tips/how-to-export-display-from-linux-to-freebsd.html</a></td>
+  <td>UNIX</td>
+ </tr>
+</table>
+ 
+<table>
+ <tr>
+  <th width="150px">Command</th>
+  <th>Description</th>
+  <th>OS</th>
+ </tr>
+ <tr>
+  <th class="subH" colspan="3">Networking Tools</th>
+ </tr>
+ <tr>
+ <tr>
+  <td><b>ping</b> <span class="variable">hostname</span><br /><i>UNIX Path:/usr/sbin/</i></td>
+  <td>Use to check network connections</td>
+  <td>All</td>
+ </tr> 
+ <tr>
+  <td><b>ifconfig</b> -a<br /><span class="variable">NIC "up/down"</span>
+  <br />plumb<p></p><i>Path: /sbin/ or /usr/sbin/</i></td>
+  <td>Used to check the computers network configuration. Similar to ipconfig in windows.<br />
+<b>Example of bring the NIC card/interface down:</b><br />ifconfig eth1 down<br />
+<p></p>The CMD plumb sets the device to a physical interface name.
+  </td>
+  <td>UNIX</td>
+ </tr>
+  <tr>
+  <td><b>ipconfig</b><br />
+      /all<br />
+      /renew<br />
+      /release<br /></td>
+  <td>Displays network setting, like a computers IP address.<br />
+      /all gives more details.<br />
+      /renew gets new network settings from the DNS server.<br />
+      /release releases the computers network settings</td>
+  <td>Windows</td>    
+ </tr>
+ <tr>
+  <td><b>arp</b> <span class="variable">hostname</span>
+  <br/><i>UNIX Path: /usr/sbin/</td>
+  <td>The arp command is for name to address resolution.</td>
+  <td>All</td>
+ </tr>
+ <tr>
+  <td><b>nslookup</b> <span class="variable">servername</span></td>
+  <td>Gives server IP address</td>
+  <td>All</td>
+ </tr>
+ <tr>
+  <td><b>netstat</b> -rn</td>
+  <td>Shows routing table</td>
+  <td>All</td>
+ </tr>
+ <tr>
+  <td><b>dladm</b> show-link</td>
+  <td>Shows network interfases</td>
+  <td>Solaris</td>
+ </tr>
+ <tr>
+  <td><b>ntpdate</b> <span class="variable">NTP server</span><br /><i>Path:/usr/sbin/</i></td>
+  <td>Re-sinks the local machine with the NTP servers date/time</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+  <td><b>ipfw list</b></td>
+  <td>Allows you to see the actual firewall rules<br /> 
+  Must have ipf firewall installed to work. Installed on Mac OS X by default</td>
+  <td>BSD</td>
+ </tr>
+ <tr>
+  <td><b>ipf</b></td>
+  <td>Allows IP filtering. * Must be root to use</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+  <td><b>traceroute</b><br /><i>Path: /usr/sbin/traceroute</i></td>
+  <td>Traces routes</td>
+  <td>All</td>
+ </tr>
+ <tr>
+  <td><b>route</b> add net <span class="variable">IP IP</span>
+   <br /><i>Path: /usr/sbin/</td>
+  <td>Add static routes</td>
+  <td>All</td>
+ </tr>
+</table>
+ 
+ 
+<table>
+ <tr>
+  <th width="150px">File</th>
+  <th>Description</th>
+  <th>OS</th>
+ </tr>
+  <tr>
+  <td><b>hosts</b></td>
+  <td>File that holds network addresses of the local host and other computer that the host 
+  communicates with. This file has been replaced by DNS.
+  <br /><b>UNIX:</b> /etc/<br /><b>Windows:</b> %SystemRoot%\System32\drivers\etc\</td>
+  <td>All</td>
+ </tr> 
+<tr>
+  <td>/etc/<b>hosts.allow</b></td>
+  <td>Used with ssh</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+  <td>/etc/<b>hosts.deny</b></td>
+  <td>Used with ssh</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+  <td>/etc/<b>resolv.conf</b></td>
+  <td>Mostly used for DNS. Useful for LDAP as well</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+  <td>/etc/<b>nsswitch.conf</b></td>
+  <td>Tells server where to look 1st for name server/LDAP</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+</table></p>
+ 
+<p>This page is just a place for me to hold my notes. 
+Hey help me out, if your on this page, you most likely know me. So do me a favor and let me know if
+I have grammar or spelling errors. If you want to add your own notes to the page let me know. 
+I will of course credit you, if you do. I need ideas to improve the layout, 
+so if you have any tell me.
+</p> 
+ 
+</div></div><!--- body --->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!----------google-analytics-------------------------------------------------------->
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10815286-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+

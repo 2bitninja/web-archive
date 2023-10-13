@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title> </title>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+   <meta name="keywords" content="UNIX, Linux, commands, networking">
+   <meta name="description" content="This is where I put all my command 
+line notes that involve networking.">
+   <meta name="google-site-verification" content="Z4seMEA9SYFtPADLCF_Fuc-wzOLmYRCWVwbrEMAcKsc" />
+<style type="text/css"> 
+.SBContent {FONT: 12px arial, Helvetica, Geneva, Swiss, SunSans-Regular; 
+	MARGIN-LEFT: 5px; COLOR: black; MARGIN-RIGHT: 5px;
+}
+#bg {position: absolute; 
+	top: 5px; left: 5px;            
+        height: 135em; width: 1000px;
+        background-color: #980000;
+}
+#header {position: absolute; 
+         top: 10px; left: 10px;
+         height: 50px; width: 990px;  
+         background-color: #B2987E;
+	text-align:center;
+}
+#nav {position: absolute; 
+	top: 70px; left: 10px;     
+         height: 200px; width: 150px;             
+        background-color: #B2987E;
+}
+#L {position: absolute; 
+	top: 275px; left: 10px;     
+         height: 200px; width: 150px;            
+        background-color: #B2987E;
+}
+#ports {position: absolute; 
+	top: 480px; left: 10px;     
+         height: 440px; width: 150px;            
+        background-color: #B2987E;
+} 
+#notes {position: absolute; 
+	top: 930px; left: 10px;     
+         height: 190px; width: 150px;            
+        background-color: #B2987E;
+} 
+#body {position: absolute; 
+       top: 70px; left: 170px;
+       height: 130em; width: 830px;             
+       background-color: #B2987E;
+}
+#date {position: absolute; 
+       top: 18px; left: 940px;
+       font-size: 10px;
+} 
+ 
+ 
+ 
+body {background-color: #280000;
+}
+td {vertical-align: top; border: 2px solid #980000; background-color: white;
+padding: 3px 7px 3px 10px;
+}
+th {background-color: #980000; border: 2px solid black; 
+}
+.subH {background-color: white; border: 2px solid #980000; color: #980000;
+}
+.table {border-collapse:collapse; width: 400px;
+}
+body.table { width: 820px;
+}
+.variable {font-style: italic; font-weight: bold; color: gray;
+}
+#hd1 {font-size:25px; font-weight: bold; color: #980000;
+}
+#hd2 {font-size:15px;  
+}
+.SN {color: #980000;
+}
+</style>
+</head>
+<body>
+<div id="bg"><div class="SBContent"></div></div>
+ 
+<div id="header"><div class="SBContent">
+<span id="hd1">My NetBackup Notes</span><br />
+ <b>(Solaris, Linux, BSD, Mac OS X & Windows)</b>
+</div></div><!--- header --->
+ 
+ 
+<div id="nav"><div class="SBContent">
+<a href="cmd.htm"></a><a href="cmd.htm">Main CMDs</a><br />
+<a href="unix.htm"></a><a href="unix.htm">Unix</a><br />
+<a href="edit.htm">Editors</a><br />
+<a href="terminal.htm">Terminal</a><br />
+<a href="#">Disk and File Management</a><br />
+<a href="netbackup.htm">NetBackup</a><br />
+<a href="windows.htm">Windows</a><br />
+<a href="networking.htm">Networking</a><br />
+<a href="shortcutkeys.htm">Short Cut Keys</a>
+</div></div><!--- nav --->
+ 
+ 
+<div id="L"><div class="SBContent">
+Legend<br />
+<b>UNIX</b><br />UNIX based systems
+</div></div><!--- L --->
+ 
+<div id="date">Last updated: 01-20-2015</div> <!--- date --->
+ 
+<div id="ports"><div class="SBContent"><p>
+<table> 
+ <tr>
+  <th>NetBackup Ports</th>
+ </tr>
+ <tr>
+  <td>bpcd 13782/tcp</td>
+ </tr>
+ <tr>
+  <td>PBX 1556/tcp</td>
+ </tr>
+ <tr>
+  <td>vnetd 13724/tcp</td>
+ </tr>
+ <tr>
+  <td>bprd 13730/tcp</td>
+ </tr> 
+ <tr>
+  <td>vopied 13783/tcp</td>
+ </tr>
+ <tr>
+  <td>bpjava-msvc 13722/tcp</td>
+ </tr>
+ <tr>
+  <td>OpsCenter 13786/tcp</td>
+ </tr>
+ <tr>
+  <td>OpsCenter SNMP trap 162/udp</td>
+ </tr>
+ <tr>
+  <td>vCenter 443/tcp</td>
+ </tr>
+ <tr>
+  <td>vCenter nbd transport for ESXi host 902/tcp</td>
+ </tr>
+ <tr>
+  <td>GRT 13782/tcp</td>
+ </tr>
+ <tr>
+  <td>NDMP (DMA) 1000/tcp</td>
+ </tr>
+
+</table> </p>
+</div></div><!---------- NetBackup Ports ------------------>
+ 
+<div id="notes"><div class="SBContent"><p>
+<table>
+  <tr>
+  <th>Notes</th>
+ </tr>
+ <tr>
+  <td>* /opt/openv can be used instead of /usr/openv/<br />
+      * Before you take a client server down. 
+      You must first remove the server from the NetBackup Master Server.</td>
+ </tr>
+</table>
+</div></div><!--- Notes --->
+ 
+ 
+<div id="body"><div class="SBContent"><br />
+ 
+<table>
+ <tr>
+  <th width="190px">Command or File</th>
+  <th>Description</th>
+  <th  width="80px">OS/Program</th>
+ </tr>
+ <tr>
+  <th class="subH" colspan="3">Drivers</th>
+ </tr>
+ <tr>
+  <td><b>add_drv</b> <span class="variable">driver</span></td>
+  <td>Use to add/install drivers</td>
+  <td>Solaris</td>
+ </tr>
+ <tr>
+  <td><b>rem_drv</b> <span class="variable">driver</span></td>
+  <td>Use to remove drivers</td>
+  <td>Solaris</td>
+ </tr>
+ <tr>
+  <td><b>sg.install</b></td>
+  <td>Use to install drivers</td>
+  <td>UNIX</td>
+ </tr>
+ <tr>
+  <th class="subH" colspan="3">Important Netbackup files</th>
+ </tr>
+ <tr>
+  <td><b>hosts</b></td>
+  <td>NetBackup uses this system file or DNS to find hosts and servers.<br />
+  <b>UNIX Path:</b> /etc/<br /><b>Windows Path:</b> %SystemRoot%\System32\drivers\etc\</td>
+  <td>System</td>
+ </tr>
+ <tr>
+  <td><b>hosts.allow</b><br /><i>Path: /etc/</i></td>
+  <td>NetBackup uses this file to allow services on servers and clients.</td>
+  <td>system</td>
+ </tr>
+ <tr>
+  <td><b>bp.conf</b><br /><i>Path:<br /> /usr/openv/netbackup/</i></td>
+  <td>NetBackup network config file. Used to define server and clints used by Netbackup.
+<br /><b>* Note -</b> this file does not exist on Windows machines. 
+The NetBackup Client GUI takes care of this under "Specify NetBackup Machines".</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>auth.conf</b><br /><i>Path: /usr/openv/netbackup/bin/</i></td>
+  <td>NetBackup file permissions.</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>NetBackup GUI</b><br /><i>Path & CMD:<br /> /usr/openv/netbackup/bin/<b>jnbSA</b></i></td>
+  <td>This the default path to the NetBackup GUI. Use this command to lanuch the app.</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <th class="subH" colspan="3">Commmands</th>
+ </tr>
+ <tr>
+  <td><b>tpautoconf</b> -t<br />-a<br />-v<br /><p></p><i>Path: /usr/openv/volmgr</i></td>
+  <td>Shows how tape drives are being seen by NetBackup<br />
+Automaticly configures devices for you<br />Verbos - detail feedback</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>tpconfig</b> -d</td>
+  <td>Allows you to rest tape devices. Can up or down devices. 
+  Allows you to manually configure tape<br /><b>Path:</b> /usr/openv/volmgr/bin</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>cfgadm</b> -al<br />-c unconfigure <span class="variable">c[#]</span><br />
+-c configure <span class="variable">c[#]</span></td>
+  <td>To inspect configuration</td>
+  <td>Solaris 10 </td>
+ </tr>
+ <tr>
+  <td><b>devfsadm</b> -C -c <span class="variable">disk/tape</span></td>
+  <td>Resets special device files.<br /> -C Clears special device files and 
+  -c Resets special device files</td>
+  <td>Solaris 10</td>
+ </tr>
+ <tr>
+  <td><b>sgscan</b> all<br /></td>
+  <td>Validates how drivers see devices. <br /><b>Path:</b> /usr/openv/volmgr/bin/</td>
+  <td>NetBackup</td>
+ </tr> 
+ <tr>
+  <td><b>netbackup</b> <span class="variable">start/stop</span></td>
+  <td>To start or stop NetBackup. <br /><b>Path:</b> /usr/openv/netbackup/bin/goodies</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>bp.start_all</b></td>
+  <td>NetBackup command to start NetBackup.<br /><b>UNIX Path:</b> /usr/openv/netbackup/bin/<br />
+<b>Windows path:</b> {install Path}netbackup/bin/</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>bp.kill_all</b></td>
+  <td>Old NetBackup command to stop NetBackup. Use the new command netbackup.</td>
+  <td>NetBackup</td>
+ </tr>
+  <tr>
+  <td><b>S77netbackup</b> <span class="variable">start/stop</span><br />
+      <i>Path: /etc/rc2.d/</i></td>
+  <td>To start or stop NetBackup though the use of the rc script.</td>
+  <td>System</td>
+ </tr>
+ <tr>
+  <td><b>bpdown</b></td>
+  <td>Brings NetBackup down in Windows.<br /><b>Path:</b> [Install Path]\NetBackup\bin\</td>
+  <td>NetBackup<br />Windows</td>
+ </tr>
+  <tr>
+  <td><b>bpup</b></td>
+  <td>Brings NetBackup up in Windows.<br /><b>Path:</b> [Install Path]\NetBackup\bin\</td>
+  <td>NetBackup<br />Windows</td>
+ </tr> 
+ <tr>
+  <td><b>bpps -x</b><br />-x<br />-a</td>
+  <td>Shows NetBackup's running processes. <br />
+      <b>-x</b> Shows every Netbackup process.
+      <b>-a</b> Only shows important processes.<br /><b>Path:</b> /usr/openv/netbackup/bin/</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>vxpbx_exchange</b> <span class="variable">start/stop</span>
+<p></p><i>Path: /opt/VRTSpbx/bin</i></td>
+  <td>Use this to start or stop the PBX program. NetBackup needs this program to run.</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>sg.build all</b></td>
+  <td><b>Path:</b> /usr/openv/volmgr/bin/</td>
+  <td>NetBackup</td>
+ </tr> 
+ <tr>
+  <td><b>bpbackup</b></td>
+  <td>Use this command to start a NetBackup job from the command line.<br />
+  <b>Path:</b> /usr/openv/netbackup/bin/</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>bpexpdate</b><br /> -host <span class="variable">hostname</span><br /> 
+  -m <span class="variable">tape#</span> -d <span class="variable">0</span></td>
+  <td>Use this to zero out tapes so you can use them on other servers. <b>-host</b> hostname.
+  <b>-m</b> MediaType
+  <b>-d0</b> Zeros out tape
+  <br /><b>Path:</b>/usr/openv/netbackup/admincmd/</td>
+  <td>NetBackup</td>
+ </tr> 
+ <tr>
+  <td><b>vmupcmd</b> -h <span class="variable">hostname</span> 
+<span class="variable">-up|down|reset</span></td>
+  <td>Used to up, down and reset drives</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>nbrbutil</b><br />-resetMediaServer <span class="variable">MediaServer</span></td>
+  <td>Resets Media server. Can eject stuck tapes.<br />
+  <b>Path:</b> /usr/openv/netbackup/bin/admincmd/</td>
+  <td>NetBackup</td>
+ </tr>
+  <tr>
+  <td><b>bpclntcmd</b><br />-hn <span class="variable">hostname</span> <br />
+  -ip <span class="variable">IP address</span> </td>
+  <td>-hn with a hostname gives you what NetBackup see as the servers IP address<br />
+  -ip with a IP address shows you what Netbackup thinks is the hostname.<br />
+  <b>Path:</b> /usr/openv/netbackup/bin/</td>
+  <td>NetBackup</td>
+ </tr>
+  <tr>
+  <td><b>nbemmcmd</b></td>
+  <td>Adds hosts and Media servers to the the NetBackup Master server.<br />
+  <b>Path:</b> /usr/openv/netbackup/bin/</td>
+  <td>NetBackup</td>
+ </tr>
+</table>
+ 
+ 
+<p>
+<table> 
+ <tr>
+  <th>File</th>
+  <th>Location</th>
+  <th>Description</th>
+  <th>Type</th>
+ </tr>
+  <tr>
+  <th class="subH" colspan="4">Logs</th><!-------- NetBackup Logs ------------->
+ </tr>
+ <tr>
+  <td><b>bpcd</b></td>
+  <td><b>UNIX:</b> /usr/openv/netbackup/logs/<br />
+      <b>Windows:</b> {Install_Path}\netbackup\logs\</td>
+  <td></td>    
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>bprd</b></td>
+  <td><b>UNIX:</b> /usr/openv/netbackup/logs/<br />
+      <b>Windows:</b> {Install_Path}\netbackup\logs\</td>
+  <td></td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>bpsched</b></td>
+  <td><b>UNIX:</b> /usr/openv/netbackup/logs/<br />
+      <b>Windows:</b> {Install_Path}\netbackup\logs\</td>
+  <td></td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>bpbrm</b></td>
+  <td><b>UNIX:</b> /usr/openv/netbackup/logs/<br />
+      <b>Windows:</b> {Install_Path}\netbackup\logs\</td>
+  <td></td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>bptm</b></td>
+  <td><b>UNIX:</b> /usr/openv/netbackup/logs/<br />
+      <b>Windows:</b> {Install_Path}\netbackup\logs\</td>
+  <td></td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>bpbkar</b></td>
+  <td><b>UNIX:</b> /usr/openv/netbackup/logs/<br />
+      <b>Windows:</b> Install_Path}\netbackup\logs\</td>
+  <td></td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>tar</b></td>
+  <td><b>UNIX:</b> /usr/openv/netbackup/logs/<br />
+      <b>Windows:</b> {Install_Path}\netbackup\logs\</td>
+  <td>For restore issues.</td>
+  <td>NetBackup</td>
+ </tr>
+ <tr>
+  <td><b>logview</b></td>
+  <td><b>UNIX:</b> /usr/openv/netbackup/bin/</td>
+  <td></td>
+  <td>NetBackup</td>
+ </tr>
+  <tr>
+  <td><b>messages</b></td>
+  <td><b>UNIX:</b> /usr/adm/</td>
+  <td>Check this log, if it is used, to see the status of system when you restart NetBackup. 
+  Make sure all drives go all the way up or down.</td>
+  <td>System</td>
+ </tr>
+  <tr>
+  <td><b>daemonlog</b></td>
+  <td><b>UNIX:</b> /var/log/</td>
+  <td>Check this log, if it is used, to see the status of system when you restart NetBackup. 
+  Make sure all drives go all the way up or down.</td>
+  <td>System</td>
+ </tr>
+</table>
+</p>
+ 
+<p>This page is just a place for me to hold my notes. 
+Hey help me out, if your on this page, you most likely know me. So do me a favor and let me know if
+I have grammar or spelling errors. If you want to add your own notes to the page let me know. 
+I will of course credit you, if you do. I need ideas to improve the layout, 
+so if you have any tell me.
+</p> 
+ 
+</div>
+ 
+ 
+</div></div><!--- body --->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!----------google-analytics-------------------------------------------------------->
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-10815286-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
+ 
+

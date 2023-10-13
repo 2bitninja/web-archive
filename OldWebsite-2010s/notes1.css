@@ -1,0 +1,39 @@
+td {vertical-align: top; border: 2px dotted #980000;  
+padding: 3px 7px 3px 10px;
+}
+th {background-color: #980000; border: 2px solid black;
+}
+.subH {background-color: white; border: 2px solid #980000; color: #980000;
+}
+table {border-collapse:collapse; width: 850px;
+}
+.variable {font-style: italic; font-weight: bold; color: gray;
+}
+#win {position: absolute; top: 10px; left: 10px;
+}
+#hd1 {font-size:30px;
+}
+#hd2 {font-size:20px;
+}
+.SN {color: #980000;
+}
+
+
+
+a.menu {font-size: 1em; padding-left: .5em; 
+        text-decoration: none; display: block; width: 9.5em; 
+        border: 1px #5f8ac5; margin: 1px;
+}
+a.menu:link { color: black; background-color: white; border: 1px solid #5f8ac5; font-weight: normal;
+}
+a.menu:visited { color: black; background-color: white; border: 1px solid #5f8ac5;
+}
+a.menu:hover { color: white; background-color: #5f8ac5; border: 1px solid black; 
+}
+a.menu:active { color: #d3ddf; background-color: #CEB631; border: 1px solid black; font-weight: bold;
+}
+
+#MNavBar, #Mcont {position: relative; float: left; margin-left: .3em; padding: .3em;
+}
+#MNavBar {width: 150px; height: 400px; margin: .1em;
+}
